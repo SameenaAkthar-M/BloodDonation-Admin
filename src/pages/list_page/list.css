@@ -1,0 +1,152 @@
+.top{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.top h2{
+  color: black;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.donors-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: left;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sno{
+  text-align: center;
+}
+.donors-table th,
+.donors-table td {
+  padding: 12px 15px;
+  border: 1px solid gray;
+}
+
+.donors-table th {
+  background-color: #8C1C13;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.table-container {
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.donors-table td .update-btn,
+.donors-table td .delete-btn {
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  margin: 2px;
+}
+
+.update-btn {
+  background-color: green;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #8C1C13;
+  color: white;
+}
+
+.update-form{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  transition: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.update-form select, input{
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.update-form button{
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.update-form h3{
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .donors-table {
+    width: 700px;
+  }
+  .donors-table th,
+  .donors-table td {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .donors-table td .update-btn,
+  .donors-table td .delete-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+@media (min-width: 769px) {
+  .table-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .donors-table {
+    width: 100%;
+    border-radius: 15px;
+    font-size: 18px;
+  }
+
+  .donors-table th,
+  .donors-table td {
+    padding: 15px 20px;
+  }
+
+  .donors-table td .update-btn,
+  .donors-table td .delete-btn {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+}
